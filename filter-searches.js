@@ -36,7 +36,14 @@ const blocked = [
     /https?:\/\/www\.educative\.io/,
     /https?:\/\/www\.javatpoint\.com/,
     /https?:\/\/www\.javascripttutorial\.net/,
-
+    /https?s:\/\/techblog\.geekyants\.com/,
+    /https?s:\/\/levelup\.gitconnected\.com/,
+    /https?s:\/\/freshman\.tech/,
+    /https?s:\/\/daily\.dev/,
+    /https?s:\/\/www\.turing\.com/,
+    /https?s:\/\/www\.codingnepalweb\.com/,
+    /https?s:\/\/www\.guru99\.com/,
+    /https?s:\/\/pythonbasics\.org/,
 ];
 
 
@@ -58,6 +65,13 @@ function cleanResults() {
         const insertAfterElem = nonblocked[Math.min(nonblocked.length, 3)-1];
         insertAfterElem.parentElement.insertBefore(elements.qa, insertAfterElem.nextElementSibling);
     }
+    console.log(nonblocked.map(node => `/${
+        node.querySelector('cite').childNodes[0].textContent
+            .replaceAll('.', '\\.')
+            .replaceAll('/', '\\/')
+            .replaceAll('http', 'https')
+            .replaceAll('https', 'https?')
+    }/`).join(',\n'));
 }
 
 function run() {
