@@ -44,6 +44,11 @@ const blocked = [
     /https?s:\/\/www\.codingnepalweb\.com/,
     /https?s:\/\/www\.guru99\.com/,
     /https?s:\/\/pythonbasics\.org/,
+    /https?s:\/\/gomakethings\.com/,
+    /https?s:\/\/makersaid\.com/,
+    /https?s:\/\/attacomsian\.com/,
+    /https?s:\/\/www\.w3resource\.com/,
+    /https?s:\/\/www\.designcise\.com/,
 ];
 
 
